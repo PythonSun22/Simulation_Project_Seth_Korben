@@ -2,9 +2,11 @@
 #define EVENT_NODE_H
 //Header file for node funciton prototypes.
 struct eventNode{
-    int arrivalTime;
-    int type;
-
+    double arrivalTime;
+    int eventType;
+    double requested_Ts;
+    //if interrupted
+    double remaining_Ts;
 
 };
 //Constructor
