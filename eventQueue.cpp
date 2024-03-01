@@ -29,8 +29,13 @@ public:
     // Method to insert a new node at the beginning of the list
     void insert(int ID, double arrival, int type, double Ts) {
         Node* newNode = new Node(ID, arrival, type, Ts);
-        newNode->next = head;
-        head = newNode;
+        Node* current = head;
+        while(!(current->next == nullptr))
+        {
+            current = current->next;
+        }
+        current->next = newNode;
+        
     }
 
     // Method to display the contents of the list
