@@ -6,7 +6,4 @@
 //Definitions for the node functions.
 //Constructor
 using namespace std;
-
-void eventNode(double arrival, int type, double burst){
-    
-}
+//Prototypes:

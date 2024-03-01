@@ -1,7 +1,8 @@
 #ifndef EVENT_NODE_H
 #define EVENT_NODE_H
 //Header file for node funciton prototypes.
-struct eventNode{
+struct Node{
+    int processID;
     double arrivalTime;
     int eventType;
     //Enum:
@@ -11,9 +12,20 @@ struct eventNode{
     //Disk Depart = 4
 
     //generated Ts
-    double burst;
+    double burst;//created on construction or upon entering Q?
     //Time waiting in ready queue
     double waitTime;
-    eventNode* next;
+    Node* next;
+
+    //Constructor:
+    Node(int ID, double arrival, int type, double Ts){
+        processID = ID;
+        arrivalTime = arrival;
+        eventType = type;
+        burst = Ts;
+        waitTime = 0;
+        next = nullptr;
+    }
 };
+
 #endif
