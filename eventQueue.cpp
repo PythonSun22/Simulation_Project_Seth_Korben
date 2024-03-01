@@ -34,14 +34,16 @@ public:
     }
 
     // Method to display the contents of the list
-    /*
+    
     void display() {
         Node* current = head;
+        cout << endl;
         while (current) {
-            std::cout << current->data << " ";
+            std::cout << "PID: " << current->processID << ", Process Type:  " << current->eventType 
+            << ", Arrival Time: " << current->arrivalTime << ", Ts: " << current->burst << endl;
             current = current->next;
         }
         std::cout << std::endl;
     }
-    */
+    
 };

@@ -24,7 +24,7 @@ struct Node{
         eventType = type;
         burst = Ts;
         waitTime = 0;
-        next = nullptr;
+        //Node* next
     }
 };
 
