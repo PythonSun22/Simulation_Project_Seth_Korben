@@ -1,5 +1,5 @@
-#include "eventNode.h"
-#include "eventQueue.h"
+#include "eventQueue.cpp"
+#include "readyQueue.h"
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -7,5 +7,5 @@ using namespace std;
 
 int main(){
     double lambda = 0;
-    eventNode* event_head = new eventNode;
+    EventQueue eventQueue;
 }
