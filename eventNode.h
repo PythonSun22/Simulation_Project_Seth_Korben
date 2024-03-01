@@ -4,9 +4,13 @@
 struct eventNode{
     double arrivalTime;
     int eventType;
-    double requested_Ts;
+    //CPU Arrival = 1
+    //CPU Depart = 2
+    //Disk Arrival = 3
+    //Disk Depart = 4
+    double burst;
     //if interrupted
-    double remaining_Ts;
+    double ;
 
 };
 //Constructor
