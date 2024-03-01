@@ -4,41 +4,16 @@
 struct eventNode{
     double arrivalTime;
     int eventType;
+    //Enum:
     //CPU Arrival = 1
     //CPU Depart = 2
     //Disk Arrival = 3
     //Disk Depart = 4
+
+    //generated Ts
     double burst;
-    //if interrupted
-    double ;
-
+    //Time waiting in ready queue
+    double waitTime;
+    eventNode* next;
 };
-//Constructor
-//pre: arrival time, event type (resource needed: Disk/CPU)
-//      service time(CPU burst time), 
-//post:
-
-//Getters
-//pre: 
-//post:
-
-//pre: 
-//post:
-
-//pre: 
-//post:
-
-//pre: 
-//post:
-
-//Setters
-//pre: 
-//post:
-
-//pre: 
-//post:
-
-//pre: 
-//post:
-
 #endif
