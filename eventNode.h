@@ -25,6 +25,7 @@ struct Node{
         burst = Ts;
         waitTime = 0;
         next = nullptr;
+        
     }
 };
 
