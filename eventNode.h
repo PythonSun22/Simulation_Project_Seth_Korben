@@ -1,9 +1,9 @@
 #ifndef EVENT_NODE_H
 #define EVENT_NODE_H
-//Header file for node funciton prototypes.
+//Header file for node function prototypes.
 struct Node{
     int processID;
-    double arrivalTime;
+    double eventTime;
     int eventType;
     //Enum:
     //CPU Arrival = 1
@@ -18,9 +18,9 @@ struct Node{
     Node* next;
 
     //Constructor:
-    Node(int ID, double arrival, int type, double Ts){
+    Node(int ID, double time, int type, double Ts){
         processID = ID;
-        arrivalTime = arrival;
+        eventTime = time;
         eventType = type;
         burst = Ts;
         waitTime = 0;

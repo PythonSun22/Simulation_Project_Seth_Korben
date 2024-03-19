@@ -27,14 +27,20 @@ public:
     }
 
     // Method to insert a new node at the beginning of the list
-    void insert(int ID, double arrival, int type, double Ts) {
-        Node* newNode = new Node(ID, arrival, type, Ts);
-        Node* current = head;
-        while(!(current->next == nullptr))
-        {
-            current = current->next;
+    void insert(int ID, double time, int type, double Ts = 0.0) {
+        Node* newNode = new Node(ID, time, type, Ts);
+        //Node* current = head;
+        if (head == nullptr)
+            head = newNode;
+        else{
+            //newNode->next = head;
+            //head = newNode;
+            Node* temp = head;
+            while (temp->next != nullptr){
+                temp = temp->next;
+            }
+            temp->next = newNode;
         }
-        current->next = newNode;
         
     }
 
@@ -45,10 +51,13 @@ public:
         cout << endl;
         while (current) {
             std::cout << "PID: " << current->processID << ", Process Type:  " << current->eventType 
-            << ", Arrival Time: " << current->arrivalTime << ", Ts: " << current->burst << endl;
+            << ", Arrival Time: " << current->eventTime << ", Ts: " << current->burst << endl;
             current = current->next;
         }
         std::cout << std::endl;
     }
-    
+
+    Node* get_head() {
+        return head;
+    }
 };
